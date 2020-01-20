@@ -160,7 +160,11 @@ section.resume-section .resume-item .resume-date {
 }
 
 .bg-primary {
+  margin-left:15px;
   background-color: #1d688c !important;
+  -webkit-box-shadow: -3px -2px 5px 0px rgba(145,132,145,1);
+  -moz-box-shadow: -3px -2px 5px 0px rgba(145,132,145,1);
+  box-shadow: -3px -2px 5px 0px rgba(145,132,145,1);
 }
 
 .text-primary {
