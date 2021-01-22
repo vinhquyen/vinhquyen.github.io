@@ -49,5 +49,11 @@
     },
     "dependencies": {
       "axios": ">=0.21.1"
+    },
+    "dependencies": {
+        "object-path": ">=0.11.5"
+    },
+    "dependencies": {
+        "yargs-parser": ">=5.0.0-security.0"
     }
 }
