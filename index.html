@@ -80,9 +80,6 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
           </li>
-          <!-- <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-        </li> -->
         </ul>
       </div>
     </nav>
@@ -104,6 +101,9 @@
         <div class="social-icons">
           <a href="https://www.facebook.com/stake.boo" target="_blank">
             <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="https://www.instagram.com/demon.aquarius" target="_blank">
+            <i class="fab fa-instagram" aria-hidden="true"></i>
           </a>
         </div>
         <p class="lead mb-5">
@@ -217,11 +217,12 @@
               Good understanding software design, database design, RestfulAPI, ... Testing &amp; Debugging</li>
             <li>
               <i class="fa-li fa fa-check"></i>
-              Agile Development &amp; Scrum</li>
-            <i class="fa-li fa fa-check"></i>
-            Good understanding about the Agile and Scrum process</li>
+              Agile Development &amp; Scrum
+            </li>
             <li>
-
+              <i class="fa-li fa fa-check"></i>
+              Good understanding about the Agile and Scrum process
+            </li>
           </ul>
       </div>
     </section>
@@ -255,6 +256,16 @@
 </html>
 <script>
   (function (e) {
+    var isIE11 = !!window.MSInputMethodContext && !!document.documentMode;
+    if (isIE11) {
+      setTimeout(function () {
+          window.scrollTo(0, 0);
+        },
+        300);
+    } else if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
     $("span#eYear").text(function () {
       return moment().format('YYYY') - 2017;
     });
