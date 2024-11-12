@@ -4,177 +4,299 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-resume/blob/master/LICENSE)
  */
 
+/* Main Styles */
 body {
-  font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
   padding-top: 54px;
-  color: #868e96;
+  color: #2c3e50;
+  background-color: #f8f9fa;
 }
 
+/* Navigation Styles */
+.nav-custom {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+}
+
+#sideNav {
+  padding: 1rem;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#sideNav .navbar-brand {
+  display: flex;
+  margin: auto auto 0;
+  padding: 0.5rem;
+}
+
+.img-profile {
+  max-width: 160px;
+  max-height: 160px;
+  border: 0.3rem solid rgba(255,255,255,0.2);
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+/* Section Styles */
+section.resume-section {
+  padding-top: 5rem !important;
+  padding-bottom: 5rem !important;
+  max-width: 75rem;
+  margin: 0 auto;
+}
+
+.resume-section {
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+  margin: 20px;
+  transition: transform 0.2s;
+}
+
+.resume-section:hover {
+  transform: translateY(-5px);
+}
+
+/* Typography */
+h1 {
+  font-size: 4rem;
+  line-height: 4.5rem;
+  color: #2c3e50;
+}
+
+h2 {
+  font-size: 3rem;
+  color: #2c3e50;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 10px;
+  margin-bottom: 30px;
+}
+
+h3 {
+  font-size: 1.75rem;
+  color: #34495e;
+}
+
+.subheading {
+  font-family: 'Saira Extra Condensed', sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 1.35rem;
+  color: #3498db;
+}
+
+/* Skills Section */
+.skill-category {
+  margin-bottom: 2rem;
+}
+
+.badge {
+  padding: 0.5rem 1rem;
+  margin: 0.2rem;
+  font-size: 0.9rem;
+  border-radius: 20px;
+}
+
+.badge-primary {
+  background: #3498db;
+  color: white;
+}
+
+.badge-success {
+  background: #2ecc71;
+  color: white;
+}
+
+/* Experience Timeline */
+.resume-item {
+  position: relative;
+  padding: 20px;
+  border-left: 2px solid #3498db;
+  margin-left: 20px;
+}
+
+.resume-item::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 30px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #3498db;
+}
+
+.resume-date {
+  min-width: 180px;
+  color: #7f8c8d;
+}
+
+/* List Styles */
+.fa-ul {
+  margin-left: 2.5rem;
+}
+
+.fa-li {
+  color: #3498db;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Social Icons */
+.social-icons a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.5rem;
+  width: 3.5rem;
+  background-color: #495057;
+  color: #fff;
+  border-radius: 100%;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.social-icons a:hover {
+  background-color: #3498db;
+  transform: scale(1.1);
+}
+
+/* Responsive Design */
 @media (min-width: 992px) {
   body {
     padding-top: 0;
     padding-left: 17rem;
   }
-}
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #343a40;
-}
-
-h1 {
-  font-size: 6rem;
-  line-height: 5.5rem;
-}
-
-h2 {
-  font-size: 3.5rem;
-}
-
-h3 {
-  font-size: 2rem;
-}
-
-p.lead {
-  font-size: 1.15rem;
-  font-weight: 400;
-}
-
-.subheading {
-  text-transform: uppercase;
-  font-weight: 500;
-  font-family: 'Saira Extra Condensed', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
-  font-size: 1.5rem;
-}
-
-.social-icons a {
-  display: inline-block;
-  height: 3.5rem;
-  width: 3.5rem;
-  background-color: #495057;
-  color: #fff !important;
-  border-radius: 100%;
-  text-align: center;
-  font-size: 1.5rem;
-  line-height: 3.5rem;
-  margin-right: 1rem;
-}
-
-.social-icons a:last-child {
-  margin-right: 0;
-}
-
-.social-icons a:hover {
-  background-color: #1d688c;
-}
-
-.dev-icons {
-  font-size: 3rem;
-}
-
-.dev-icons .list-inline-item i:hover {
-  color: #BD5D38;
-}
-
-#sideNav .navbar-nav .nav-item .nav-link {
-  font-weight: 800;
-  letter-spacing: 0.05rem;
-  text-transform: uppercase;
-}
-
-#sideNav .navbar-toggler:focus {
-  outline-color: #d48a6e;
-}
-
-@media (min-width: 992px) {
-  #sideNav {
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    width: 17rem;
-    height: 100vh;
-  }
-  #sideNav .navbar-brand {
-    display: flex;
-    margin: auto auto 0;
-    padding: 0.5rem;
-  }
-  #sideNav .navbar-brand .img-profile {
-    max-width: 10rem;
-    max-height: 10rem;
-    border: 0.5rem solid rgba(255, 255, 255, 0.2);
-  }
-  #sideNav .navbar-collapse {
-    display: flex;
-    align-items: flex-start;
-    flex-grow: 0;
-    width: 100%;
-    margin-bottom: auto;
-  }
-  #sideNav .navbar-collapse .navbar-nav {
-    flex-direction: column;
-    width: 100%;
-  }
-  #sideNav .navbar-collapse .navbar-nav .nav-item {
-    display: block;
-  }
-  #sideNav .navbar-collapse .navbar-nav .nav-item .nav-link {
-    display: block;
-  }
-}
-
-section.resume-section {
-  padding-top: 5rem !important;
-  padding-bottom: 5rem !important;
-  max-width: 75rem;
-}
-
-section.resume-section .resume-item .resume-date {
-  min-width: none;
-}
-
-@media (min-width: 768px) {
-  section.resume-section {
-    min-height: 100vh;
-  }
-  section.resume-section .resume-item .resume-date {
-    min-width: 18rem;
-  }
-}
-
-@media (min-width: 992px) {
   section.resume-section {
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
   }
 }
 
-.bg-primary {
-  margin-left:15px;
-  background-color: #1d688c !important;
-  -webkit-box-shadow: -3px -2px 5px 0px rgba(145,132,145,1);
-  -moz-box-shadow: -3px -2px 5px 0px rgba(145,132,145,1);
-  box-shadow: -3px -2px 5px 0px rgba(145,132,145,1);
+/* Print Styles */
+@media print {
+  body {
+    padding: 0;
+    background: white;
+  }
+
+  .resume-section {
+    box-shadow: none;
+    margin: 0;
+    padding: 2rem !important;
+  }
+
+  .nav-custom {
+    display: none;
+  }
 }
 
-.text-primary {
-  color: #1d688c !important;
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-a {
-  color: #1d688c;
+.resume-section {
+  animation: fadeIn 0.5s ease-out;
 }
 
-a:hover, a:focus, a:active {
-  color: #824027;
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3498db;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2980b9;
+}
+
+/* Technical Stack Section */
+.technical-stack {
+    margin: 2rem 0;
+}
+
+/* Headings */
+.technical-stack h3 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+/* Backend/Frontend Development Headers */
+.technical-stack > div {
+    font-size: 1.2rem;
+    color: #34495e;
+    font-weight: 600;
+    margin: 1.5rem 0 1rem 0;
+}
+
+/* Skill Level Headers (Advanced, Proficient, Experienced) */
+.technical-stack .skill-level {
+    font-size: 1rem;
+    color: #7f8c8d;
+    margin: 0.5rem 0;
+}
+
+/* Skill Items */
+.technical-stack .skill-items {
+    font-size: 0.95rem;
+    color: #505965;
+    margin-left: 1.5rem;
+    line-height: 1.6;
+}
+
+/* List Styling */
+.technical-stack ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.technical-stack ul li {
+    margin-bottom: 0.5rem;
+}
+
+/* Bullet Points */
+.technical-stack ul li::before {
+    content: "•";
+    color: #3498db;
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* Responsive Font Sizes */
+@media (max-width: 768px) {
+    .technical-stack h3 {
+        font-size: 1.3rem;
+    }
+    
+    .technical-stack > div {
+        font-size: 1.1rem;
+    }
+    
+    .technical-stack .skill-level {
+        font-size: 0.9rem;
+    }
+    
+    .technical-stack .skill-items {
+        font-size: 0.85rem;
+    }
 }
